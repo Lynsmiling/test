@@ -20,6 +20,159 @@
   @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css);
   @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.1/css/mdb.min.css);
 
+  /*设置登陆弹窗样式*/
+  /****** LOGIN MODAL ******/
+  .loginmodal-container {
+    padding: 30px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    font-family: roboto;
+  }
+
+  .loginmodal-container h1 {
+    text-align: center;
+    font-size: 1.8em;
+    font-family: roboto;
+  }
+
+  .loginmodal-container input[type=submit] {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .loginmodal-container input[type=text], input[type=password] {
+    height: 44px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+
+  .loginmodal-container input[type=text]:hover, input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .loginmodal {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 8px;
+  /* border-radius: 3px; */
+  /* -webkit-user-select: none;
+    user-select: none; */
+  }
+
+  .loginmodal-submit {
+    /* border: 1px solid #3079ed; */
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    background-color: #4d90fe;
+    padding: 17px 0px;
+    font-family: roboto;
+    font-size: 14px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+  }
+
+  .loginmodal-submit:hover {
+    /* border: 1px solid #2f5bb7; */
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    background-color: #357ae8;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+  }
+
+  .loginmodal-container a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.5s;
+  }
+
+  .login-help{
+    font-size: 12px;
+  }
+  /*设置登陆弹窗样式 end*/
+
+  //-- devise start
+.auth-box{
+  background-color:#fff;
+  margin-bottom: 10px;
+  border:1px solid rgba(255, 255, 255, 0.4);;
+  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  margin-top:10px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  -moz-box-shadow:    0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  box-shadow:         0px 0px 30px 0px rgba(50, 50, 50, 0.32);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: background 1s ease-in-out;
+  -moz-transition: background 1s ease-in-out;
+  -ms-transition: background 1s ease-in-out;
+  -o-transition: background 1s ease-in-out;
+  transition: background 1s ease-in-out;
+}
+
+.auth-box legend{
+  color:#fff;
+  border:none;
+  font-weight:300;
+  font-size:24px;
+}
+
+@media(max-width:460px){
+.auth-box{
+   margin:0 10px;
+ }
+}
+
+.auth-box label{
+ color:#888;
+}
+
+.auth-box input::-webkit-input-placeholder { /* WebKit browsers */
+  color:    #fff;
+  font-weight:300;
+}
+.auth-box input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #fff;
+  font-weight:300;
+}
+.auth-box input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff;
+  font-weight:300;
+}
+.auth-box input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #fff;
+  font-weight:300;
+}
+  //-- devise end
+
 h2 h3{
   color: #1D2330;
 }
@@ -169,7 +322,7 @@ p{
 }
 //-- content test end
 
-//-- index-table start
+//-- product-table start
 .product-table{
   table {
     margin: 0 auto;
@@ -227,65 +380,7 @@ tbody {
 }
 }
 }
-//-- index-table end
-
-//-- checkout-table start
-.checkout-table{
-  margin: 0 auto;
-  width: 900px;
-  text-align: center;
-
-  table {
-  margin-top: 10px;
-	overflow: hidden;
-	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  a {
-    color: #1A237E;
-  }
-  a:hover{
-    color: #424242;
-    text-decoration:underline;
-  }
-
-td {
-	background-color: rgba(255,255,255,0.2);
-	color: #263238;
-  font-weight:bold;
-}
-
-thead {
-	th {
-    background-color: #1D2330;
-    color: #bdc3c7;
-    text-align: center;
-	}
-}
-
-tbody {
-	tr {
-		&:hover {
-			background-color: rgba(255,255,255,0.3);
-		}
-	}
-  td {
-  position: relative;
-  &:hover {
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: -9999px;
-      bottom: -9999px;
-      background-color: rgba(255,255,255,0.2);
-      z-index: -1;
-    }
-  }
-}
-}
-}
-}
-//-- checkout-table end
+//-- product-table end
 
 //-- show start
 .show-image{
